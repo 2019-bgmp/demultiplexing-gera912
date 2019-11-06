@@ -17,7 +17,7 @@ conda deactivate
 conda activate bgmp_py3
 
 
-/usr/bin/time -v for f in *.fastq.gz ; do
+for f in *.fastq.gz ; do
   mv -- "$f" "${f%.fastq.gz}.fastq"
   done
 /usr/bin/time -v gzip *.fastq
